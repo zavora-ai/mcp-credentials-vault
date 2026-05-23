@@ -306,11 +306,14 @@ cargo run --features all-backends
 
 | Document | Description |
 |----------|-------------|
-| [API Reference](https://docs.rs/mcp-credentials-vault) | Full Rust API documentation |
+| [API Reference](docs/api-reference.md) | All 8 tools with parameters, returns, and examples |
+| [Backends](docs/backends.md) | Configuration for each vault backend |
+| [Security Model](docs/security-model.md) | Zero-exposure architecture and threat model |
 | [CHANGELOG.md](CHANGELOG.md) | Version history |
-| [mcp-server.toml](mcp-server.toml) | Registry manifest |
+| [mcp-server.toml](mcp-server.toml) | ADK-Rust Enterprise registry manifest |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Development guidelines |
 | [SECURITY.md](SECURITY.md) | Vulnerability reporting |
+| [Rust Docs](https://docs.rs/mcp-credentials-vault) | Generated API documentation |
 
 ## Contributing
 
