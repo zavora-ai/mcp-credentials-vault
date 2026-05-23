@@ -1,0 +1,67 @@
+server_id = "mcp_credentials_vault"
+display_name = "Credentials Vault MCP"
+version = "1.0.0"
+domain = "platform"
+sdk_version = "0.1.0"
+risk_level = "critical"
+writes_allowed = "gated"
+transports = ["stdio", "streamable_http"]
+credentials = []
+governance_gates = ["policy_evaluation_required", "audit_all_access"]
+environments = ["development", "staging", "production"]
+
+[[tools]]
+name = "list_credentials"
+description = "List credential metadata — never exposes raw secret values"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "get_credential_metadata"
+description = "Inspect owner, scope, expiry, rotation policy, and risk level"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "request_runtime_secret"
+description = "Issue a scoped runtime handle after policy checks — returns handle, not raw secret"
+risk_class = "identity_security_action"
+requires_approval = true
+credential_bindings = []
+
+[[tools]]
+name = "request_workload_token"
+description = "Mint a short-lived OIDC or workload identity token"
+risk_class = "identity_security_action"
+requires_approval = true
+credential_bindings = []
+
+[[tools]]
+name = "rotate_credential"
+description = "Rotate a secret through the approved workflow"
+risk_class = "identity_security_action"
+requires_approval = true
+credential_bindings = []
+
+[[tools]]
+name = "revoke_credential"
+description = "Disable a compromised or expired credential"
+risk_class = "identity_security_action"
+requires_approval = true
+credential_bindings = []
+
+[[tools]]
+name = "audit_credential_access"
+description = "Retrieve access, denial, and rotation audit events"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "validate_secret_scope"
+description = "Check whether an agent, skill, or MCP server can use a credential"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
