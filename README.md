@@ -9,29 +9,9 @@ Scoped, auditable credential access for [ADK-Rust Enterprise](https://enterprise
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    MCP Agents / Skills                    │
-└────────────────────────────┬────────────────────────────┘
-                             │ MCP Protocol (stdio / HTTP)
-┌────────────────────────────▼────────────────────────────┐
-│              Credentials Vault MCP Server                 │
-│                                                          │
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌───────────┐  │
-│  │list_creds│ │request_  │ │rotate_   │ │audit_     │  │
-│  │get_meta  │ │runtime   │ │revoke    │ │validate   │  │
-│  │          │ │token     │ │          │ │scope      │  │
-│  └──────────┘ └──────────┘ └──────────┘ └───────────┘  │
-│                                                          │
-│  ┌────────────────── VaultBackend Trait ──────────────┐  │
-│  │                                                    │  │
-│  │  HashiCorp │ AWS Secrets │ GCP Secret │ Azure Key  │  │
-│  │  Vault     │ Manager    │ Manager    │ Vault      │  │
-│  │            │            │            │            │  │
-│  │                    ADK Vault (internal)            │  │
-│  └────────────────────────────────────────────────────┘  │
-└──────────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <img src="docs/architecture.svg" alt="Credentials Vault MCP Architecture" width="800"/>
+</p>
 
 ## Key Principles
 

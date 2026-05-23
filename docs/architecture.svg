@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="serverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b"/>
+      <stop offset="100%" style="stop-color:#312e81"/>
+    </linearGradient>
+    <linearGradient id="toolGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5"/>
+      <stop offset="100%" style="stop-color:#4338ca"/>
+    </linearGradient>
+    <linearGradient id="backendGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" rx="12" fill="#0f0a1e"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="700">Credentials Vault MCP — Architecture</text>
+
+  <!-- Agents Layer -->
+  <rect x="40" y="55" width="720" height="50" rx="8" fill="#1e1b4b" stroke="#4f46e5" stroke-width="1" filter="url(#shadow)"/>
+  <text x="400" y="85" text-anchor="middle" fill="#c7d2fe" font-size="13" font-weight="600">MCP Agents  ·  Skills  ·  Workflows  ·  Browser Workers  ·  Payment Flows</text>
+
+  <!-- Arrow down -->
+  <path d="M400 105 L400 125" stroke="#6366f1" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="400" y="120" text-anchor="middle" fill="#94a3b8" font-size="10">MCP Protocol (stdio / HTTP)</text>
+
+  <!-- Server Box -->
+  <rect x="40" y="130" width="720" height="240" rx="10" fill="url(#serverGrad)" stroke="#4f46e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="400" y="155" text-anchor="middle" fill="url(#headerGrad)" font-size="14" font-weight="700">Credentials Vault MCP Server</text>
+
+  <!-- Tools Row -->
+  <rect x="60" y="170" width="160" height="55" rx="6" fill="url(#toolGrad)" opacity="0.9"/>
+  <text x="140" y="192" text-anchor="middle" fill="#e0e7ff" font-size="10" font-weight="600">list_credentials</text>
+  <text x="140" y="212" text-anchor="middle" fill="#a5b4fc" font-size="9">get_credential_metadata</text>
+
+  <rect x="230" y="170" width="160" height="55" rx="6" fill="url(#toolGrad)" opacity="0.9"/>
+  <text x="310" y="192" text-anchor="middle" fill="#e0e7ff" font-size="10" font-weight="600">request_runtime_secret</text>
+  <text x="310" y="212" text-anchor="middle" fill="#a5b4fc" font-size="9">request_workload_token</text>
+
+  <rect x="400" y="170" width="160" height="55" rx="6" fill="url(#toolGrad)" opacity="0.9"/>
+  <text x="480" y="192" text-anchor="middle" fill="#e0e7ff" font-size="10" font-weight="600">rotate_credential</text>
+  <text x="480" y="212" text-anchor="middle" fill="#a5b4fc" font-size="9">revoke_credential</text>
+
+  <rect x="570" y="170" width="175" height="55" rx="6" fill="url(#toolGrad)" opacity="0.9"/>
+  <text x="657" y="192" text-anchor="middle" fill="#e0e7ff" font-size="10" font-weight="600">audit_credential_access</text>
+  <text x="657" y="212" text-anchor="middle" fill="#a5b4fc" font-size="9">validate_secret_scope</text>
+
+  <!-- Trait Layer -->
+  <rect x="60" y="240" width="685" height="30" rx="5" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.5"/>
+  <text x="400" y="260" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="600">VaultBackend Trait</text>
+
+  <!-- Backend boxes -->
+  <rect x="60" y="282" width="130" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
+  <text x="125" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">HashiCorp</text>
+  <text x="125" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Vault KV v2</text>
+  <rect x="85" y="333" width="80" height="14" rx="3" fill="#7c3aed" opacity="0.3"/>
+  <text x="125" y="344" text-anchor="middle" fill="#c4b5fd" font-size="8">hashicorp</text>
+
+  <rect x="200" y="282" width="130" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
+  <text x="265" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">AWS</text>
+  <text x="265" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Secrets Manager</text>
+  <rect x="225" y="333" width="80" height="14" rx="3" fill="#f59e0b" opacity="0.3"/>
+  <text x="265" y="344" text-anchor="middle" fill="#fcd34d" font-size="8">aws</text>
+
+  <rect x="340" y="282" width="130" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
+  <text x="405" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">GCP</text>
+  <text x="405" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Secret Manager</text>
+  <rect x="365" y="333" width="80" height="14" rx="3" fill="#3b82f6" opacity="0.3"/>
+  <text x="405" y="344" text-anchor="middle" fill="#93c5fd" font-size="8">gcp</text>
+
+  <rect x="480" y="282" width="130" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
+  <text x="545" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">Azure</text>
+  <text x="545" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Key Vault</text>
+  <rect x="505" y="333" width="80" height="14" rx="3" fill="#06b6d4" opacity="0.3"/>
+  <text x="545" y="344" text-anchor="middle" fill="#67e8f9" font-size="8">azure</text>
+
+  <rect x="620" y="282" width="130" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
+  <text x="685" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">ADK Vault</text>
+  <text x="685" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Internal / File</text>
+  <rect x="645" y="333" width="80" height="14" rx="3" fill="#10b981" opacity="0.3"/>
+  <text x="685" y="344" text-anchor="middle" fill="#6ee7b7" font-size="8">adk-vault</text>
+
+  <!-- Security flow at bottom -->
+  <rect x="40" y="385" width="720" height="55" rx="8" fill="#0c0a1a" stroke="#334155" stroke-width="1"/>
+  <text x="400" y="405" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="600">Security Flow</text>
+  <text x="400" y="425" text-anchor="middle" fill="#94a3b8" font-size="10">Agent Request → Scope Validation → Policy Check → Handle Issued → Runtime Worker Resolves (outside LLM context)</text>
+
+  <!-- Badges -->
+  <rect x="40" y="455" width="95" height="22" rx="4" fill="#7c3aed"/>
+  <text x="87" y="470" text-anchor="middle" fill="white" font-size="9" font-weight="600">rmcp 1.7</text>
+
+  <rect x="145" y="455" width="120" height="22" rx="4" fill="#4f46e5"/>
+  <text x="205" y="470" text-anchor="middle" fill="white" font-size="9" font-weight="600">Zero Secret Exposure</text>
+
+  <rect x="275" y="455" width="95" height="22" rx="4" fill="#0891b2"/>
+  <text x="322" y="470" text-anchor="middle" fill="white" font-size="9" font-weight="600">Full Audit Log</text>
+
+  <rect x="380" y="455" width="110" height="22" rx="4" fill="#059669"/>
+  <text x="435" y="470" text-anchor="middle" fill="white" font-size="9" font-weight="600">5 Vault Backends</text>
+
+  <rect x="500" y="455" width="85" height="22" rx="4" fill="#d97706"/>
+  <text x="542" y="470" text-anchor="middle" fill="white" font-size="9" font-weight="600">8 MCP Tools</text>
+
+  <rect x="595" y="455" width="165" height="22" rx="4" fill="#be185d"/>
+  <text x="677" y="470" text-anchor="middle" fill="white" font-size="9" font-weight="600">ADK-Rust Enterprise Ready</text>
+
+  <!-- Footer -->
+  <text x="400" y="505" text-anchor="middle" fill="#64748b" font-size="10">enterprise.adk-rust.com · Zavora AI · Apache-2.0</text>
+</svg>
