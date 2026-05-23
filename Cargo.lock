@@ -1481,6 +1481,7 @@ name = "mcp-credentials-vault"
 version = "1.0.0"
 dependencies = [
  "adk-mcp-sdk",
+ "anyhow",
  "async-trait",
  "aws-config",
  "aws-sdk-secretsmanager",
