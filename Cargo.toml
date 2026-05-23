@@ -24,7 +24,8 @@ aws = ["dep:aws-sdk-secretsmanager", "dep:aws-config"]
 gcp = ["dep:reqwest", "dep:gcp_auth"]
 azure = ["dep:reqwest"]
 adk-vault = []
-all-backends = ["hashicorp", "aws", "gcp", "azure", "adk-vault"]
+adk-platform = ["dep:reqwest"]
+all-backends = ["hashicorp", "aws", "gcp", "azure", "adk-vault", "adk-platform"]
 
 [dependencies]
 adk-mcp-sdk = { version = "0.1.0", path = "../adk-mcp-sdk" }

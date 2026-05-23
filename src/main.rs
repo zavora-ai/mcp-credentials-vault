@@ -50,6 +50,13 @@ async fn main() -> anyhow::Result<()> {
 
     backends.push(Box::new(adk));
 
+    // ADK Platform (if configured)
+    #[cfg(feature = "adk-platform")]
+    if let Some(platform) = adk_platform::AdkPlatformBackend::from_env() {
+        backends.push(Box::new(platform));
+        tracing::info!("ADK Platform backend enabled");
+    }
+
     // AWS (if configured)
     #[cfg(feature = "aws")]
     if std::env::var("AWS_REGION").is_ok() || std::env::var("AWS_DEFAULT_REGION").is_ok() {

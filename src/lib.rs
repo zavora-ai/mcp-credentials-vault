@@ -22,6 +22,9 @@ pub mod azure;
 #[cfg(feature = "adk-vault")]
 pub mod adk_vault;
 
+#[cfg(feature = "adk-platform")]
+pub mod adk_platform;
+
 pub mod server;
 
 pub use backend::VaultBackend;
