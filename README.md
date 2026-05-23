@@ -10,7 +10,7 @@ Scoped, auditable credential access for [ADK-Rust Enterprise](https://enterprise
 ## Architecture
 
 <p align="center">
-  <img src="docs/architecture.svg" alt="Credentials Vault MCP Architecture" width="800"/>
+  <img src="https://raw.githubusercontent.com/zavora-ai/mcp-credentials-vault/main/docs/architecture.svg" alt="Credentials Vault MCP Architecture" width="800"/>
 </p>
 
 ## Key Principles
