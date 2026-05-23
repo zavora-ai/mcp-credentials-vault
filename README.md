@@ -44,6 +44,153 @@ Scoped, auditable credential access for [ADK-Rust Enterprise](https://enterprise
 | Azure Key Vault | `azure` | Azure-native workloads |
 | ADK Vault | `adk-vault` | Platform-managed credentials (default) |
 
+## Installation
+
+### Build from source
+
+```bash
+git clone https://github.com/zavora-ai/mcp-credentials-vault
+cd mcp-credentials-vault
+cargo build --release --features all-backends
+```
+
+The binary is at `target/release/mcp-credentials-vault`.
+
+### Claude Desktop
+
+Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
+
+```json
+{
+  "mcpServers": {
+    "credentials-vault": {
+      "command": "/path/to/mcp-credentials-vault",
+      "args": [],
+      "env": {
+        "RUST_LOG": "info"
+      }
+    }
+  }
+}
+```
+
+### Kiro
+
+Add to your project's `.kiro/settings/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "credentials-vault": {
+      "command": "/path/to/mcp-credentials-vault",
+      "args": [],
+      "env": {
+        "RUST_LOG": "info"
+      }
+    }
+  }
+}
+```
+
+### Codex (OpenAI)
+
+Add to `~/.codex/config.json`:
+
+```json
+{
+  "mcpServers": {
+    "credentials-vault": {
+      "command": "/path/to/mcp-credentials-vault"
+    }
+  }
+}
+```
+
+### Antigravity
+
+Add to your Antigravity workspace MCP configuration:
+
+```json
+{
+  "servers": [
+    {
+      "name": "credentials-vault",
+      "transport": "stdio",
+      "command": "/path/to/mcp-credentials-vault",
+      "env": {
+        "RUST_LOG": "info"
+      }
+    }
+  ]
+}
+```
+
+### Open Code
+
+Add to `~/.config/opencode/config.json`:
+
+```json
+{
+  "mcp": {
+    "credentials-vault": {
+      "command": "/path/to/mcp-credentials-vault",
+      "args": []
+    }
+  }
+}
+```
+
+### Cursor
+
+Add to `.cursor/mcp.json` in your project root:
+
+```json
+{
+  "mcpServers": {
+    "credentials-vault": {
+      "command": "/path/to/mcp-credentials-vault",
+      "args": []
+    }
+  }
+}
+```
+
+### Windsurf
+
+Add to `~/.codeium/windsurf/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "credentials-vault": {
+      "command": "/path/to/mcp-credentials-vault",
+      "args": []
+    }
+  }
+}
+```
+
+### Any MCP Client (Streamable HTTP)
+
+For clients that support HTTP transport, run the server in HTTP mode:
+
+```bash
+mcp-credentials-vault --transport http --port 8080
+```
+
+Then connect your client to `http://localhost:8080/mcp`.
+
+### Docker
+
+```bash
+docker run -p 8080:8080 \
+  -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
+  -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
+  -e GOOGLE_APPLICATION_CREDENTIALS=/creds/gcp.json \
+  -v ~/.config/gcloud/application_default_credentials.json:/creds/gcp.json \
+  ghcr.io/zavora-ai/mcp-credentials-vault:latest
+```
+
 ## Quick Start
 
 ### Installation
