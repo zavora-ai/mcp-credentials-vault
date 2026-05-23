@@ -43,6 +43,7 @@ Scoped, auditable credential access for [ADK-Rust Enterprise](https://enterprise
 | GCP Secret Manager | `gcp` | GCP-native workloads |
 | Azure Key Vault | `azure` | Azure-native workloads |
 | ADK Vault | `adk-vault` | Platform-managed credentials (default) |
+| ADK Platform API | `adk-platform` | ADK-Rust Enterprise centralized management |
 
 ## Installation
 
@@ -246,6 +247,10 @@ let server = CredentialsVaultServer::new(vec![
 
 | Variable | Backend | Purpose |
 |----------|---------|---------|
+| `ADK_PLATFORM_URL` | ADK Platform | Platform base URL |
+| `ADK_PLATFORM_API_KEY` | ADK Platform | API key (`ep_live_xxxx`) |
+| `ADK_WORKSPACE_ID` | ADK Platform | Workspace UUID |
+| `ADK_VAULT_PATH` | ADK Vault | JSON persistence file path |
 | `VAULT_ADDR` | HashiCorp | Vault server URL |
 | `VAULT_TOKEN` | HashiCorp | Authentication token |
 | `AWS_REGION` | AWS | AWS region |

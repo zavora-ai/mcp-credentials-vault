@@ -9,7 +9,7 @@ The Credentials Vault MCP server supports 5 pluggable backends. Enable them via 
 mcp-credentials-vault = { version = "1.0", features = ["aws"] }
 
 # Multiple backends
-mcp-credentials-vault = { version = "1.0", features = ["aws", "gcp", "adk-vault"] }
+mcp-credentials-vault = { version = "1.0", features = ["aws", "gcp", "adk-platform"] }
 
 # All backends
 mcp-credentials-vault = { version = "1.0", features = ["all-backends"] }
@@ -183,6 +183,59 @@ let backend = HashicorpBackend::new(
     "http://127.0.0.1:8200".into(),
     "hvs.CAESIG...".into(),
     None, // uses "secret" mount
+);
+```
+
+---
+
+## ADK-Rust Enterprise Platform
+
+**Feature:** `adk-platform`
+
+Delegates all operations to the ADK-Rust Enterprise Platform API. This is the recommended backend for production deployments where the platform manages credentials centrally.
+
+### Configuration
+
+| Env Variable | Description |
+|-------------|-------------|
+| `ADK_PLATFORM_URL` | Platform base URL (e.g. `http://localhost:8080`) |
+| `ADK_PLATFORM_API_KEY` | Platform API key (e.g. `ep_live_xxxx`) |
+| `ADK_WORKSPACE_ID` | Workspace UUID |
+
+### API Mapping
+
+| MCP Tool | Platform Endpoint |
+|----------|------------------|
+| `list_credentials` | `GET /api/v1/credentials` |
+| `get_credential_metadata` | `GET /api/v1/credentials/{id}` |
+| `request_runtime_secret` | `POST /api/v1/credentials/{id}/runtime-handle` |
+| `request_workload_token` | `POST /api/v1/credentials/{id}/workload-token` |
+| `rotate_credential` | `POST /api/v1/credentials/{id}/rotate` |
+| `revoke_credential` | `DELETE /api/v1/credentials/{id}` |
+| `audit_credential_access` | `GET /api/v1/admin/audit?resource_type=credentials` |
+| `validate_secret_scope` | `POST /api/v1/credentials/{id}/validate-scope` |
+
+### Capabilities
+
+- ✅ Full CRUD lifecycle via platform API
+- ✅ Centralized audit logging
+- ✅ Platform-managed rotation workflows
+- ✅ Workspace-scoped access
+- ✅ Auto-detected from environment variables
+
+### Usage
+
+```rust
+use mcp_credentials_vault::adk_platform::AdkPlatformBackend;
+
+// From environment (recommended)
+let backend = AdkPlatformBackend::from_env().expect("ADK_PLATFORM_* env vars required");
+
+// Explicit
+let backend = AdkPlatformBackend::new(
+    "http://localhost:8080".into(),
+    "ep_live_xxxx".into(),
+    "019e5452-01dc-...".into(),
 );
 ```
 

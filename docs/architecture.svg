@@ -61,35 +61,41 @@
   <text x="400" y="260" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="600">VaultBackend Trait</text>
 
   <!-- Backend boxes -->
-  <rect x="60" y="282" width="130" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
-  <text x="125" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">HashiCorp</text>
-  <text x="125" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Vault KV v2</text>
-  <rect x="85" y="333" width="80" height="14" rx="3" fill="#7c3aed" opacity="0.3"/>
-  <text x="125" y="344" text-anchor="middle" fill="#c4b5fd" font-size="8">hashicorp</text>
+  <rect x="55" y="282" width="110" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
+  <text x="110" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">HashiCorp</text>
+  <text x="110" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Vault KV v2</text>
+  <rect x="72" y="333" width="76" height="14" rx="3" fill="#7c3aed" opacity="0.3"/>
+  <text x="110" y="344" text-anchor="middle" fill="#c4b5fd" font-size="8">hashicorp</text>
 
-  <rect x="200" y="282" width="130" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
-  <text x="265" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">AWS</text>
-  <text x="265" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Secrets Manager</text>
-  <rect x="225" y="333" width="80" height="14" rx="3" fill="#f59e0b" opacity="0.3"/>
-  <text x="265" y="344" text-anchor="middle" fill="#fcd34d" font-size="8">aws</text>
+  <rect x="175" y="282" width="110" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
+  <text x="230" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">AWS</text>
+  <text x="230" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Secrets Manager</text>
+  <rect x="192" y="333" width="76" height="14" rx="3" fill="#f59e0b" opacity="0.3"/>
+  <text x="230" y="344" text-anchor="middle" fill="#fcd34d" font-size="8">aws</text>
 
-  <rect x="340" y="282" width="130" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
-  <text x="405" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">GCP</text>
-  <text x="405" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Secret Manager</text>
-  <rect x="365" y="333" width="80" height="14" rx="3" fill="#3b82f6" opacity="0.3"/>
-  <text x="405" y="344" text-anchor="middle" fill="#93c5fd" font-size="8">gcp</text>
+  <rect x="295" y="282" width="110" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">GCP</text>
+  <text x="350" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Secret Manager</text>
+  <rect x="312" y="333" width="76" height="14" rx="3" fill="#3b82f6" opacity="0.3"/>
+  <text x="350" y="344" text-anchor="middle" fill="#93c5fd" font-size="8">gcp</text>
 
-  <rect x="480" y="282" width="130" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
-  <text x="545" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">Azure</text>
-  <text x="545" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Key Vault</text>
-  <rect x="505" y="333" width="80" height="14" rx="3" fill="#06b6d4" opacity="0.3"/>
-  <text x="545" y="344" text-anchor="middle" fill="#67e8f9" font-size="8">azure</text>
+  <rect x="415" y="282" width="110" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
+  <text x="470" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">Azure</text>
+  <text x="470" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Key Vault</text>
+  <rect x="432" y="333" width="76" height="14" rx="3" fill="#06b6d4" opacity="0.3"/>
+  <text x="470" y="344" text-anchor="middle" fill="#67e8f9" font-size="8">azure</text>
 
-  <rect x="620" y="282" width="130" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
-  <text x="685" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">ADK Vault</text>
-  <text x="685" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Internal / File</text>
-  <rect x="645" y="333" width="80" height="14" rx="3" fill="#10b981" opacity="0.3"/>
-  <text x="685" y="344" text-anchor="middle" fill="#6ee7b7" font-size="8">adk-vault</text>
+  <rect x="535" y="282" width="110" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
+  <text x="590" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">ADK Vault</text>
+  <text x="590" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Internal / File</text>
+  <rect x="552" y="333" width="76" height="14" rx="3" fill="#10b981" opacity="0.3"/>
+  <text x="590" y="344" text-anchor="middle" fill="#6ee7b7" font-size="8">adk-vault</text>
+
+  <rect x="655" y="282" width="110" height="72" rx="6" fill="url(#backendGrad)" stroke="#334155" stroke-width="1"/>
+  <text x="710" y="305" text-anchor="middle" fill="#f1f5f9" font-size="10" font-weight="600">ADK Platform</text>
+  <text x="710" y="320" text-anchor="middle" fill="#94a3b8" font-size="9">Enterprise API</text>
+  <rect x="672" y="333" width="76" height="14" rx="3" fill="#e11d48" opacity="0.3"/>
+  <text x="710" y="344" text-anchor="middle" fill="#fda4af" font-size="8">adk-platform</text>
 
   <!-- Security flow at bottom -->
   <rect x="40" y="385" width="720" height="55" rx="8" fill="#0c0a1a" stroke="#334155" stroke-width="1"/>
@@ -107,7 +113,7 @@
   <text x="322" y="470" text-anchor="middle" fill="white" font-size="9" font-weight="600">Full Audit Log</text>
 
   <rect x="380" y="455" width="110" height="22" rx="4" fill="#059669"/>
-  <text x="435" y="470" text-anchor="middle" fill="white" font-size="9" font-weight="600">5 Vault Backends</text>
+  <text x="435" y="470" text-anchor="middle" fill="white" font-size="9" font-weight="600">6 Vault Backends</text>
 
   <rect x="500" y="455" width="85" height="22" rx="4" fill="#d97706"/>
   <text x="542" y="470" text-anchor="middle" fill="white" font-size="9" font-weight="600">8 MCP Tools</text>
