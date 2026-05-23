@@ -5,6 +5,8 @@ version = 4
 [[package]]
 name = "adk-mcp-sdk"
 version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0da15f083bddfc93a1d0d5ff71390de4af24d795ee799a1b382c110ca4f7d3d4"
 dependencies = [
  "async-trait",
  "serde",
