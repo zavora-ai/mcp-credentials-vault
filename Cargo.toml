@@ -2,7 +2,7 @@
 name = "mcp-credentials-vault"
 version = "1.0.0"
 edition = "2024"
-authors = ["James Karanja Maina <james@zavora.ai>"]
+authors = ["James Karanja Maina <james.karanja@zavora.ai>"]
 license = "Apache-2.0"
 description = "Credentials Vault MCP server for ADK-Rust Enterprise — scoped, auditable credential access with pluggable vault backends"
 repository = "https://github.com/zavora-ai/mcp-credentials-vault"

@@ -14,7 +14,7 @@ This is a security-critical server that handles credential access. We take vulne
 
 Instead, please report via:
 
-- Email: security@zavora.ai
+- Email: james.karanja@zavora.ai
 - Subject: `[mcp-credentials-vault] Security Vulnerability`
 
 Include:
