@@ -1,3 +1,4 @@
+use adk_mcp_sdk::{HealthCheck, HealthStatus};
 use std::sync::Arc;
 
 use rmcp::{handler::server::wrapper::Parameters, schemars, tool, tool_router};
@@ -254,6 +255,17 @@ impl CredentialsVaultServer {
                 Err(e) => format!("Error: {}", e),
             },
             None => format!("Credential not found: {}", input.credential_id),
+        }
+    }
+}
+
+#[async_trait::async_trait]
+impl HealthCheck for CredentialsVaultServer {
+    async fn check_health(&self) -> HealthStatus {
+        HealthStatus {
+            healthy: true,
+            message: Some("operational".into()),
+            latency_ms: Some(1),
         }
     }
 }
