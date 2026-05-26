@@ -3,10 +3,10 @@
 [![Crates.io](https://img.shields.io/crates/v/mcp-credentials-vault.svg)](https://crates.io/crates/mcp-credentials-vault)
 [![Docs.rs](https://docs.rs/mcp-credentials-vault/badge.svg)](https://docs.rs/mcp-credentials-vault)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![ADK-Rust Enterprise](https://img.shields.io/badge/ADK--Rust-Enterprise-purple.svg)](https://www.zavora.ai)
-[![Registry Ready](https://img.shields.io/badge/ADK_Registry-Ready-green.svg)](https://www.zavora.ai)
+[![ADK-Rust Enterprise](https://img.shields.io/badge/ADK--Rust-Enterprise-purple.svg)](https://enterprise.adk-rust.com)
+[![Registry Ready](https://img.shields.io/badge/ADK_Registry-Ready-green.svg)](https://enterprise.adk-rust.com)
 
-Scoped, auditable credential access for [ADK-Rust Enterprise](https://www.zavora.ai) agents. Provides 8 MCP tools over 5 pluggable vault backends — **never exposes raw secrets to LLM context**.
+Scoped, auditable credential access for [ADK-Rust Enterprise](https://enterprise.adk-rust.com) agents. Provides 8 MCP tools over 5 pluggable vault backends — **never exposes raw secrets to LLM context**.
 
 ## Architecture
 
@@ -338,7 +338,7 @@ Apache-2.0 — see [LICENSE](LICENSE) for details.
 
 ---
 
-Part of the [ADK-Rust Enterprise](https://www.zavora.ai) MCP server ecosystem.
+Part of the [ADK-Rust Enterprise](https://enterprise.adk-rust.com) MCP server ecosystem.
 
 Built with ❤️ by [Zavora AI](https://zavora.ai)
 
